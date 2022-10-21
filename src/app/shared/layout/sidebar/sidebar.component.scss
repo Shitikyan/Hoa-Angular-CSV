@@ -1,0 +1,25 @@
+.sidebar {
+  width: 200px;
+  height: 100%;
+  background-color: #1e1e2d;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 25px;
+
+  .p-button-label {
+    text-align: left;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

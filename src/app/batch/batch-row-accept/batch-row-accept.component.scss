@@ -1,0 +1,33 @@
+.batch-row-accept {
+  padding: 50px 30px;
+
+  .inputs {
+    display: flex;
+    column-gap: 25px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .border {
+    max-width: 100em;
+  }
+
+  #table {
+    .p-datatable {
+      max-width: 100em;
+
+      .selectRow {
+        cursor: pointer;
+        &:hover {
+          background-color: whitesmoke;
+        }
+      }
+    }
+  }
+
+  #table > .p-datatable > .p-datatable-header,
+  #table > .p-datatable > .p-datatable-wrapper > table > .p-datatable-thead > tr > th {
+    background-color: white;
+  }
+}

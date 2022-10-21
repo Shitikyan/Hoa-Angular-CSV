@@ -1,0 +1,12 @@
+<span class="p-float-label">
+  <input
+    [id]="uuid + '-input'"
+    [type]="type"
+    [disabled]="disabled"
+    pInputText
+    [value]="ngModel || value"
+    (change)="(ngModelChange)"
+    [class]="'w-100 ' + className"
+  />
+  <label class="label" [for]="uuid + '-input'">{{label}}</label>
+</span>

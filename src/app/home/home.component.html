@@ -1,0 +1,25 @@
+<div class="p-5">
+  <div class="pb-2">
+    <h1>HOA CSV upload</h1>
+    <span>Please select your client from dropdown then upload the CSV. Upload will be in process at the backend so that
+      you dont
+      have to wait for it to complete.</span>
+  </div>
+
+  <div class="pb-4">
+    <p class="mb-0">Select Client</p>
+    <p-dropdown [disabled]="true" [options]="clients" [(ngModel)]="selectedClient"></p-dropdown>
+  </div>
+
+  <div class="pb-4">
+    <p-fileUpload *ngIf="uploadedFiles.length !== 1" name="demo[]" [url]="path +'files'" (onUpload)="onUpload($event)"
+      accept=".csv, .xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+      <ng-template pTemplate="content">
+        <ul *ngIf="uploadedFiles.length">
+          <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+        </ul>
+      </ng-template>
+    </p-fileUpload>
+  </div>
+
+</div>

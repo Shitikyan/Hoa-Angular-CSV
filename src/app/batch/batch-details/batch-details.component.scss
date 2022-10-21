@@ -1,0 +1,20 @@
+.batchTable {
+  .p-datatable {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 54px 20px;
+    .p-datatable-header {
+      margin-left: auto;
+      border: none;
+    }
+  }
+}
+
+.batchTable > .p-datatable > .p-datatable-header,
+.batchTable > .p-datatable > .p-datatable-wrapper > table > .p-datatable-thead > tr > th {
+  background-color: white;
+}
+
+.tableInfo {
+  width: 30%;
+}

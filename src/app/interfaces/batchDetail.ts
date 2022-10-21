@@ -1,0 +1,132 @@
+export interface BatchDetail {
+    id: string;
+    batchId: string;
+    pending: boolean;
+    Ref_ID: string;
+    PropertyFullStreetAddress: string;
+    PropertyCity: string;
+    PropertyState: string;
+    PropertyZip: string;
+    APN: string;
+    Client: string;
+    Loan_Type: string;
+    Referral_Date: string;
+    U20_Actual_Date: string;
+    Voluntary: string;
+    Non_Voluntary: string;
+    FIPS: string;
+    State: string;
+    County: string;
+    Parcel: string;
+    CurrentOwner: string;
+    ParsedHouseNumber: string;
+    ParsedStreetPreDir: string;
+    ParsedStreetName: string;
+    ParsedStreetTypeSuffix: string;
+    ParsedStreetPostDir: string;
+    ParsedUnitType: string;
+    ParsedUnitNumber: string;
+    STNDAddress: string;
+    STNDUnitType: string;
+    STNDUnitNum: string;
+    STNDCity: string;
+    STNDState: string;
+    STNDZip: string;
+    STNDZip4: string;
+    LandUseDesc: string;
+    YearBuilt: number;
+    Block: string;
+    Lot: string;
+    Subdivision: string;
+    BriefLegal: string;
+    Zone: string;
+    LatestSale_RecordingDate: string;
+    LatestSale_Book: string;
+    LatestSale_Page: string;
+    LatestSale_DocNumber: string;
+    LatestSale_DocType: string;
+    LatestSale_Subdivision: string;
+    LatestSale_BriefLegal: string;
+    LatestSale_CondoRider: string;
+    LatestSale_PUDRider: string;
+    LatestLoan_RecordingDate: string;
+    LatestLoan_Book: string;
+    LatestLoan_Page: string;
+    LatestLoan_DocNumber: string;
+    LatestLoan_Subdivision: string;
+    LatestLoan_CondoRider: string;
+    LatestLoan_PUDRider: string;
+    LatestLoan_Source: string;
+    Match: string;
+    Zip9HOAIndicator: string;
+    HOA_Indicator: string;
+    HOA_Flag: string;
+    Comments: string;
+    PropertyAddress: string;
+    City: string;
+    ZipCode: string;
+    ReportDate: string;
+    NbrOfHOAs: number;
+    HOA_1_Name: string;
+    HOA_1_Type: string;
+    HOA_1_Contact_Type: string;
+    HOA_1_Contact_Name: string;
+    HOA_1_Address_Mailing: string;
+    HOA_1_City: string;
+    HOA_1_State: string;
+    HOA_1_Zip_Code: string;
+    HOA_1_Contact_Phone_Type: string;
+    HOA_1_Contact_Phone: number;
+    HOA_1_Contact_Email: string;
+    HOA_Contact_Type_2: string;
+    HOA_1_Management_Company_Name: string;
+    HOA_1_Management_Company_Address: string;
+    HOA_1_Mangement_Company_City: string;
+    HOA_1_Management_Company_State: string;
+    HOA_1_Management_Company_Zip_Code: string;
+    HOA_1_Management_Company_Phone_Type: string;
+    HOA_1_Management_Company_Phone: string;
+    HOA_1_Management_Company_Email: string;
+    HOA_2_Name: string;
+    HOA_2_Type: string;
+    HOA_2_Contact_Type: string;
+    HOA_2_Contact_Name: string;
+    HOA_2_Address_Mailing: string;
+    HOA_2_City: string;
+    HOA_2_State: string;
+    HOA_2_Zip_Code: string;
+    HOA_2_Contact_Phone_Type: string;
+    HOA_2_Contact_Phone: string;
+    HOA_2_Contact_Email: string;
+    HOA_2_Management_Company_Name: string;
+    HOA_2_Management_Company_Contact_Name: string;
+    HOA_2_Management_Company_Address: string;
+    HOA_2_Mangement_Company_City: string;
+    HOA_2_Management_Company_State: string;
+    HOA_2_Management_Company_Zip_Code: string;
+    HOA_2_Management_Company_Phone_Type: string;
+    HOA_2_Management_Company_Phone: string;
+    HOA_2_Management_Company_Email: string;
+    prop: BatchProp;
+    hoa: HOA;
+}
+
+export interface BatchProp {
+    landUse: string;
+    standardSubdivison: string;
+    subdivision2: string;
+    overrideSubdivision: string;
+}
+
+export interface HOA {
+    hoas: HOADetails[];
+}
+
+export interface HOADetails {
+    isMaster: boolean;
+    hasMaster: boolean;
+    voluntary: string;
+
+    lastVerified: Date;
+    verifiedMethod: string;
+}

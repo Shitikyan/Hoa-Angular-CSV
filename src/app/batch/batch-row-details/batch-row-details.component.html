@@ -1,0 +1,31 @@
+<div class="pl-3 pt-5">
+  <h3 class="mb-3 mt-5 text-center">Batch Details...</h3>
+  <div class="d-flex justify-content-around text-center">
+    <p class="wp-30">Batch Name: {{batch.name}}</p>
+    <p class="wp-30">Total Records: {{batch.count}}</p>
+    <p class="wp-30">Status: {{batch.status}}</p>
+  </div>
+  <app-border className="ml-3">
+    <div class="d-flex justify-content-center mt-2 mb-5" id="flexButtons">
+      <button pButton type="button" label="Skip" (click)="skipBatchrow(batchRow.id)" class="p-button-sm pl-4 pr-4"></button>
+      <button pButton type="button" label="Accept" routerLink="/batch/details/{{batchRow.id}}/accept"
+        class="p-button-success p-button-sm pl-4 pr-4"></button>
+      <button pButton type="button" label="Exit" (click)="goBack()"
+        class="p-button-warning p-button-sm pl-4 pr-4"></button>
+    </div>
+    <div class="mb-4" id="grid">
+      <app-input-disabled type="text" label="" className="b-grey" [value]="batchRow.CurrentOwner">
+      </app-input-disabled>
+      <app-input-disabled type="text" label="" [value]="batchRow.PropertyFullStreetAddress" className="b-grey">
+      </app-input-disabled>
+      <app-input-disabled type="text" label="" [value]="batchRow.PropertyCity" className="b-grey">
+      </app-input-disabled>
+      <app-input-disabled type="text" label="" [value]="batchRow.PropertyState" className="b-grey"></app-input-disabled>
+      <app-input-disabled type="text" label="" [value]="batchRow.PropertyCity" className="b-grey"></app-input-disabled>
+      <app-input-disabled type="text" label="" [value]="batchRow.PropertyZip" className="b-grey"></app-input-disabled>
+      <app-input-disabled type="text" label="" [value]="batchRow.APN" className="b-grey"></app-input-disabled>
+      <app-input-disabled type="text" label="" [value]="batchRow.Client" className="b-grey"></app-input-disabled>
+      <app-input-disabled type="text" label="" [value]="batchRow.Loan_Type" className="b-grey"></app-input-disabled>
+    </div>
+  </app-border>
+</div>

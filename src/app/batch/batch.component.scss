@@ -1,0 +1,18 @@
+.batchesTable {
+  .p-datatable {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 54px 20px;
+    margin-top: 39px;
+  }
+
+  .p-datatable > .p-datatable-header {
+    align-self: flex-end;
+    border: none;
+  }
+
+  .p-datatable > .p-datatable-header,
+  .p-datatable > .p-datatable-wrapper > table > .p-datatable-thead > tr > th {
+    background-color: white;
+  }
+}
